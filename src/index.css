@@ -56,3 +56,12 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}

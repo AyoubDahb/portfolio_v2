@@ -3,13 +3,12 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const About = () => {
   const frontendSkills = [
     "React",
-    "Vue",
-    "TypeScript",
+    "JavaScript",
     "TailwindCSS",
-    "Svelte",
+    "Bootstrap",
   ];
 
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "GraphQL"];
+  const backendSkills = ["Node.js", "Python", "C#", "SQL", "PHP","Symfony"];
 
   return (
     <section
@@ -26,8 +25,7 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-              Passionate developer with expertise in building scalable web
-              applications and creating innovative solutions.
+              Passionate developer with a strong interest in building scalable web applications and developing innovative solutions.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -70,12 +68,12 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
-                  (2016-2020)
+                  <strong> BTS SIO (Software Development and Business Applications) </strong> - Lycée Voillaume
+                  (2023-2025)
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  <strong>Professional certificate Web and Mobile Web Developer </strong> - Doranco
+                  (2022)
                 </li>
               </ul>
             </div>
@@ -85,21 +83,20 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Software Engineer at ABC Corp (2020 - Present){" "}
+                    Internship at Henri Sellier (January 2025 - March 2025){" "}
                   </h4>
                   <p>
-                    Developed and maintained microservices for cloud-based
-                    applications.
+                      Developed a permission request system with automated email notifications and a stock management app with a CRUD dashboard.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Intern at DEF Startups (2019){" "}
+                    Internship at CoiffeurDesAmis (March 2024 - April 2024){" "}
                   </h4>
                   <p>
-                    Assisted in building front-end components and integration
+                    Developed a website for a hair salon to enhance its online presence.
                     REST APIs
                   </p>
                 </div>
