@@ -97,7 +97,7 @@ export const About = () => {
                   </h4>
                   <p>
                     Developed a website for a hair salon to enhance its online presence.
-                    REST APIs
+                    
                   </p>
                 </div>
               </div>
