@@ -67,7 +67,7 @@ const ProjectCard = ({ project, index }) => {
         {/* Technologies utilisées avec un effet smooth */}
         <div className="flex flex-wrap gap-3 mt-5">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="bg-blue-500/30 text-blue-200 py-1 px-4 rounded-full text-xs font-semibold transition-all duration-300 group-hover:bg-blue-500/50">
+            <span key={index} className="bg-violet-500/30 text-violet-200 py-1 px-4 rounded-full text-xs font-semibold transition-all duration-300 group-hover:bg-violet-500/50">
               {tech}
             </span>
           ))}
@@ -108,7 +108,7 @@ const Projects = () => {
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-6 space-y-16">
-          <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-violet-500 to-gray-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
 
