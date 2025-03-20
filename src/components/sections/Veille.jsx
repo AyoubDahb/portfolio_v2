@@ -102,7 +102,7 @@ const Veille = () => {
       }
     });
   };
-
+ 
   const displayedArticles = showFavorites ? favorites : articles;
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
