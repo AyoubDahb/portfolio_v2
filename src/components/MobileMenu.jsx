@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
@@ -17,20 +16,23 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         &times;
       </button>
 
-      <a href="#home" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4 transform transition-transform duration-300">
+      <Link to="/" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         Home
-      </a>
-      <a href="#about" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4 transform transition-transform duration-300">
+      </Link>
+      <Link to="/about" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         About
-      </a>
-      <a href="#projects" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4 transform transition-transform duration-300">
+      </Link>
+      <Link to="/projects" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         Projects
-      </a>
-      <a href="#contact" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4 transform transition-transform duration-300">
+      </Link>
+      <Link to="/contact" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         Contact
-      </a>
-      <Link to="/veille" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4 transform transition-transform duration-300">
+      </Link>
+      <Link to="/veille" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         Veille
+      </Link>
+      <Link to="/internship" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
+        Internship
       </Link>
     </div>
   );

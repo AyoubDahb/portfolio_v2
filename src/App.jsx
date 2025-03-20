@@ -8,7 +8,9 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
-import Veille from "./components/sections/Veille";
+import Veille from "./components/sections/Veille"; // ✅ Import correct
+import { Internship } from "./components/sections/Internship"; // ✅ Import correct
+import { InternshipDetail } from "./components/sections/InternshipDetail"; // ✅ Import correct
 
 function MainPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,10 +33,16 @@ function App() {
   return (
     <Router>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-      <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} text-gray-100`}>
+      <div
+        className={`min-h-screen transition-opacity duration-700 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        } text-gray-100`}
+      >
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/veille" element={<Veille />} />
+          <Route path="/internship" element={<Internship />} />
+          <Route path="/internship/:id" element={<InternshipDetail />} />
         </Routes>
       </div>
     </Router>
