@@ -37,7 +37,7 @@ const VeilleNavbar = () => {
               Contact
             </button>
             <Link to="/veille" className="text-gray-300 hover:text-white transition-colors">
-              Veille
+              Veille informatique
             </Link>
             <Link to="/internship" className="text-gray-300 hover:text-white transition-colors">
               Internship
@@ -60,34 +60,36 @@ const Veille = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 10;
 
-  useEffect(() => {
-    const fetchArticles = async () => {
-      const rssUrl = "https://rss.app/feed/t9MKW3WMqhZK64Ev/embed?tab=wall";
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
+useEffect(() => {
+  const fetchArticles = async () => {
+    const rssUrl = "https://rss.app/feeds/twI6k23quN6Jp484.xml";
+    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
 
-      try {
-        const response = await fetch(proxyUrl);
-        if (!response.ok) throw new Error("Erreur de récupération du flux RSS");
+    try {
+      const response = await fetch(proxyUrl);
+      if (!response.ok) throw new Error("Erreur de récupération du flux RSS");
 
-        const data = await response.json();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, "text/xml");
+      const xmlText = await response.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(xmlText, "text/xml");
 
-        const items = Array.from(xml.querySelectorAll("item")).map((item) => ({
-          title: item.querySelector("title")?.textContent || "Titre inconnu",
-          link: item.querySelector("link")?.textContent || "#",
-          pubDate: item.querySelector("pubDate")?.textContent || "Date inconnue",
-          thumbnail: item.querySelector("media\\:thumbnail")?.getAttribute("url") || "https://via.placeholder.com/100",
-        }));
+      const items = Array.from(xml.querySelectorAll("item")).map((item) => ({
+            title: item.querySelector("title")?.textContent || "Titre inconnu",
+            link: item.querySelector("link")?.textContent || "#",
+            pubDate: item.querySelector("pubDate")?.textContent || "Date inconnue",
+            thumbnail: item.querySelector("enclosure")?.getAttribute("url") || "https://placehold.co/100",
+            }));
 
-        setArticles(items);
-      } catch (error) {
-        console.error("Erreur lors du chargement du flux RSS", error);
-      }
-    };
 
-    fetchArticles();
-  }, []);
+      setArticles(items);
+    } catch (error) {
+      console.error("Erreur lors du chargement du flux RSS", error);
+    }
+  };
+
+  fetchArticles();
+}, []);
+
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));

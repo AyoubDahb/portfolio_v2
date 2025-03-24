@@ -52,7 +52,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               Contact
             </button>
             <RouterLink to="/veille" className="text-gray-300 hover:text-white transition-colors">
-              Veille
+              Veille informatique
             </RouterLink>
             <RouterLink to="/internship" className="text-gray-300 hover:text-white transition-colors">
               Internship

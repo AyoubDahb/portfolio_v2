@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Application Permission Request System",
     description: "Developed a permission request system with automated email notifications.",
-    technologies: ["React", "Node.js", "AWS", "Docker"],
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "/images/project1.jpg",
     github: "https://github.com/example",
     live: "https://example.com",
@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Stock Management Application",
     description: "Developed a stock management app with a CRUD dashboard.",
-    technologies: ["Python", "TensorFlow", "D3.js", "Flask"],
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "/images/project2.jpg",
     github: "https://github.com/example",
     live: "https://example.com",
@@ -21,15 +21,15 @@ const projects = [
   {
     title: "Website for Hair Salon",
     description: "Developed a website for a hair salon to enhance its online presence.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+    technologies: ["CMS", "HTML", "CSS", "SQL"],
     image: "/images/project3.jpg",
     github: "https://github.com/example",
     live: "https://example.com",
   },
   {
-    title: "Strappy E-commerce",
-    description: "An e-commerce application for selling rubber straps for Brazilian Jiu-Jitsu.",
-    technologies: ["Socket.IO", "Express", "React", "Redis"],
+    title: "JO 2024",
+    description: "A web application to manage the Olympic Games ",
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "/images/project4.jpg",
     github: "https://github.com/example",
     live: "https://example.com",
