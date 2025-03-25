@@ -9,16 +9,16 @@ export const Home = () => {
      
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-500 to-violet-400 bg-clip-text text-transparent leading-right">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-200 to-violet-400 bg-clip-text text-transparent leading-right">
             Hi, I am Ayoub Dahbi
           </h1>
-          <p className="tex-gray-400 text-lg mb-9 max-w-lg mx-auto">
+          <p className="text-violet-50 text-lg mb-9 max-w-lg mx-auto">
             I’m a passionate web developer currently in my second year of a BTS SIO. I’m looking for an apprenticeship next year to enhance my skills and contribute to impactful projects. My goal is to write clean, efficient code and build user-friendly applications.
           </p>
           <div className="flex justify-center space-x-4">
             <a
               href="#projects"
-              className="bg-violet-500 text-gray py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+              className="bg-violet-500 text-gray py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] text-violet-50"
             >
               View Projects
             </a>

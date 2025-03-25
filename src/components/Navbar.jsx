@@ -34,27 +34,27 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <RouterLink to="/" className="font-mono text-xl font-bold text-gray">
+          <RouterLink to="/" className="font-mono text-xl font-bold text-violet">
             Ay<span className="text-violet-500">.Da</span>
           </RouterLink>
 
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleNavigation("home")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("home")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Home
             </button>
-            <button onClick={() => handleNavigation("about")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("about")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               About
             </button>
-            <button onClick={() => handleNavigation("projects")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("projects")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Projects
             </button>
-            <button onClick={() => handleNavigation("contact")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("contact")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Contact
             </button>
-            <RouterLink to="/veille" className="text-gray-300 hover:text-white transition-colors">
+            <RouterLink to="/veille" className="text-violet-50 hover:text-white transition-colors">
               Veille informatique
             </RouterLink>
-            <RouterLink to="/internship" className="text-gray-300 hover:text-white transition-colors">
+            <RouterLink to="/internship" className="text-violet-50 hover:text-white transition-colors">
               Internship
             </RouterLink>
           </div>

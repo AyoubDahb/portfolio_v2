@@ -55,7 +55,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Contenu du projet : plus large et lisible */}
       <div className="w-full md:w-2/5 flex flex-col justify-center p-8 md:p-10 transition-opacity duration-500 group-hover:opacity-100">
        
-        <h3 className="text-3xl font-bold text-white mt-2 transition-all duration-500 group-hover:text-white">
+        <h3 className="text-3xl font-bold text-violet-50 mt-2 transition-all duration-500 group-hover:text-white">
           {project.title}
         </h3>
 

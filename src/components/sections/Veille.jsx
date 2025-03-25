@@ -13,33 +13,33 @@ const VeilleNavbar = () => {
         duration: 500,
         smooth: true,
       });
-    }, 300);
+    }, 50);
   };
 
   return (
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-mono text-xl font-bold text-gray">
+          <Link to="/" className="font-mono text-xl font-bold text-violet">
             Ay<span className="text-violet-500">.Da</span>
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleNavigation("home")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("home")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Home
             </button>
-            <button onClick={() => handleNavigation("about")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("about")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               About
             </button>
-            <button onClick={() => handleNavigation("projects")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("projects")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Projects
             </button>
-            <button onClick={() => handleNavigation("contact")} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <button onClick={() => handleNavigation("contact")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Contact
             </button>
-            <Link to="/veille" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/veille" className="text-violet-50 hover:text-white transition-colors">
               Veille informatique
             </Link>
-            <Link to="/internship" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/internship" className="text-violet-50 hover:text-white transition-colors">
               Internship
             </Link>
           </div>
@@ -74,11 +74,11 @@ useEffect(() => {
       const xml = parser.parseFromString(xmlText, "text/xml");
 
       const items = Array.from(xml.querySelectorAll("item")).map((item) => ({
-            title: item.querySelector("title")?.textContent || "Titre inconnu",
-            link: item.querySelector("link")?.textContent || "#",
-            pubDate: item.querySelector("pubDate")?.textContent || "Date inconnue",
-            thumbnail: item.querySelector("enclosure")?.getAttribute("url") || "https://placehold.co/100",
-            }));
+        title: item.querySelector("title")?.textContent || "Titre inconnu",
+        link: item.querySelector("link")?.textContent || "#",
+        pubDate: item.querySelector("pubDate")?.textContent || "Date inconnue",
+        thumbnail: item.querySelector("enclosure")?.getAttribute("url") || "https://placehold.co/100",
+        }));
 
 
       setArticles(items);
@@ -113,7 +113,7 @@ useEffect(() => {
 
   return (
     <div
-      className="min-h-screen bg-[#0a0a0a] text-white pt-20 flex flex-col justify-between"
+      className="min-h-screen bg-[#0a0a0a] text-violet-50 pt-20 flex flex-col justify-between"
       style={{
         backgroundImage: "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))",
         backgroundAttachment: "fixed",
@@ -126,7 +126,7 @@ useEffect(() => {
         <h2 className="text-4xl font-bold mb-8">Veille Informatique - Reconnaissance Faciale</h2>
         <div className="mb-6 flex space-x-4">
           <button
-            className="bg-violet-500 px-4 py-2 rounded text-white hover:bg-violet-700 transition"
+            className="bg-violet-500 px-4 py-2 rounded text-violet-50 hover:bg-violet-700 transition"
             onClick={() => setShowFavorites((prev) => !prev)}
           >
             {showFavorites ? "Voir tous les articles" : "Voir les favoris"}
@@ -134,13 +134,13 @@ useEffect(() => {
         </div>
         <ul className="space-y-4 max-w-3xl">
           {currentArticles.map((article, index) => (
-            <li key={index} className="p-4 border border-gray-700 rounded-lg hover:bg-gray-800 transition flex items-center space-x-4">
+            <li key={index} className="p-4 border border-gray-700 rounded-lg hover:bg-gray-950 transition flex items-center space-x-4">
               <img src={article.thumbnail} alt={article.title} className="w-24 h-24 object-cover rounded" />
               <div className="flex-grow">
                 <a href={article.link} target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline text-lg font-semibold">
                   {article.title}
                 </a>
-                <p className="text-gray-400 text-sm mt-2">{article.pubDate}</p>
+                <p className="text-violet-400 text-sm mt-2">{article.pubDate}</p>
               </div>
               <button onClick={() => toggleFavorite(article)} className="text-violet-500 hover:text-violet-700 text-2xl">
                 {favorites.find((fav) => fav.link === article.link) ? <FaHeart /> : <FaRegSquare />}
