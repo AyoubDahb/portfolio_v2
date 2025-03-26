@@ -36,7 +36,7 @@ export const Home = () => {
             {/* Icônes LinkedIn et GitHub (alignées avec les boutons) */}
             <div className="flex items-center space-x-4 ml-4">
               <a
-                href="https://www.linkedin.com/in/ayoub-dahbi-52b3411b1/" // Remplace par ton LinkedIn
+                href="https://www.linkedin.com/in/ayoub-dahbi-52b3411b1" // Remplace par ton LinkedIn
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-violet-400 hover:text-violet-600 transition text-3xl"

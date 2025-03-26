@@ -17,7 +17,7 @@ const Veille = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       setIsLoading(true);
-      const rssUrl = "https://rss.app/feeds/twI6k23quN6Jp484.xml";
+      const rssUrl = "https://rss.app/feeds/tYBU1aC9Yv7AwXLq.xml";
       const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
 
       try {
