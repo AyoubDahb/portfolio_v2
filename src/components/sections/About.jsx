@@ -75,6 +75,10 @@ export const About = () => {
                   <strong>Professional certificate Web and Mobile Web Developer </strong> - Doranco
                   (2022)
                 </li>
+                 <li>
+                  <strong>Baccalauréat scientifique</strong> - Lycée Jean-Jacques Rousseau
+                  (2021)
+                </li>
               </ul>
             </div>
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
