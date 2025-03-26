@@ -4,7 +4,7 @@ import { Navbar } from "../Navbar"; // ✅ Utilise un import nommé
 const Internship = () => {
   return (
     <div
-      className="min-h-screen bg-[#0a0a0a] text-violet-100 pt-16 flex flex-col items-center justify-center"
+      className="min-h-screen bg-[#0a0a0a] text-violet pt-16 flex flex-col items-center justify-center"
       style={{
         backgroundImage: "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))",
         backgroundAttachment: "fixed",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { FaLinkedin, FaGithub } from "react-icons/fa"; // ✅ Ajout des icônes
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ export const Contact = () => {
         e.target,
         import.meta.env.VITE_PUBLIC_KEY
       )
-      .then((result) => {
+      .then(() => {
         alert("Message Sent!");
         setFormData({ name: "", email: "", message: "" });
       })
@@ -29,12 +30,11 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex flex-col items-center justify-center py-20"
     >
       <RevealOnScroll>
-        <div className="px-4 w-150">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-violet-500 to-violet-200 bg-clip-text text-transparent text-center">
-            {" "}
+        <div className="px-4 w-150 text-center">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-violet-500 to-violet-200 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -90,6 +90,27 @@ export const Contact = () => {
               Send Message
             </button>
           </form>
+
+          {/* ✅ Icônes GitHub et LinkedIn sous le formulaire */}
+          <div className="flex justify-center space-x-6 mt-6">
+            <a
+              href="https://www.linkedin.com/in/ayoub-dahbi" // Remplace par ton LinkedIn
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-400 hover:text-violet-600 transition text-3xl"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://github.com/AyoubDahb" // Remplace par ton GitHub
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-400 hover:text-violet-600 transition text-3xl"
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </RevealOnScroll>
     </section>
