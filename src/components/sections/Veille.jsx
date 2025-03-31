@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaHeart, FaRegSquare, FaSpinner } from "react-icons/fa"; // ✅ Ajout du logo de chargement
-import { Navbar } from "../Navbar"; // ✅ Utilise un import nommé
+import { FaHeart, FaRegSquare, FaSpinner } from "react-icons/fa";
+import { Navbar } from "../Navbar";
 
 const Veille = () => {
   const navigate = useNavigate();
   const [articles, setArticles] = useState([]);
-  const [favorites, setFavorites] = useState(() => {
-    // ✅ Charger les favoris depuis localStorage au premier rendu
-    const savedFavorites = localStorage.getItem("favorites");
+  const [favoris, setFavoris] = useState(() => {
+    const savedFavorites = localStorage.getItem("favoris");
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
-  const [showFavorites, setShowFavorites] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // ✅ Ajout du state de chargement
+  const [afficherFavoris, setAfficherFavoris] = useState(false);
+  const [chargement, setChargement] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
-      setIsLoading(true);
+      setChargement(true);
       const rssUrl = "https://rss.app/feeds/tYBU1aC9Yv7AwXLq.xml";
       const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
 
@@ -38,26 +37,24 @@ const Veille = () => {
       } catch (error) {
         console.error("Erreur lors du chargement du flux RSS", error);
       } finally {
-        setIsLoading(false);
+        setChargement(false);
       }
     };
 
     fetchArticles();
   }, []);
 
-  // ✅ Mise à jour des favoris dans localStorage dès qu'ils changent
   useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
+    localStorage.setItem("favoris", JSON.stringify(favoris));
+  }, [favoris]);
 
-  // ✅ Fonction pour ajouter/retirer un article des favoris
-  const toggleFavorite = (article) => {
-    setFavorites((prevFavorites) => {
-      const isAlreadyFavorited = prevFavorites.some((fav) => fav.link === article.link);
-      if (isAlreadyFavorited) {
-        return prevFavorites.filter((fav) => fav.link !== article.link);
+  const toggleFavori = (article) => {
+    setFavoris((prevFavoris) => {
+      const dejaFavori = prevFavoris.some((fav) => fav.link === article.link);
+      if (dejaFavori) {
+        return prevFavoris.filter((fav) => fav.link !== article.link);
       } else {
-        return [...prevFavorites, article];
+        return [...prevFavoris, article];
       }
     });
   };
@@ -74,8 +71,7 @@ const Veille = () => {
     >
       <Navbar />
 
-      {/* ✅ AFFICHAGE DU LOGO DE CHARGEMENT PENDANT LE CHARGEMENT */}
-      {isLoading ? (
+      {chargement ? (
         <div className="flex flex-col items-center justify-center flex-grow">
           <FaSpinner className="text-violet-500 text-6xl animate-spin" />
         </div>
@@ -85,16 +81,16 @@ const Veille = () => {
           <div className="mb-6 flex space-x-4">
             <button
               className="bg-violet-500 px-4 py-2 rounded text-white hover:bg-violet-700 transition"
-              onClick={() => setShowFavorites((prev) => !prev)}
+              onClick={() => setAfficherFavoris((prev) => !prev)}
             >
-              {showFavorites ? "Voir tous les articles" : "Voir les favoris"}
+              {afficherFavoris ? "Voir tous les articles" : "Voir les favoris"}
             </button>
           </div>
           <ul className="space-y-4 max-w-3xl">
-            {showFavorites && favorites.length === 0 && (
+            {afficherFavoris && favoris.length === 0 && (
               <p className="text-gray-400 text-center">Aucun favori pour le moment.</p>
             )}
-            {(showFavorites ? favorites : articles).map((article, index) => (
+            {(afficherFavoris ? favoris : articles).map((article, index) => (
               <li key={index} className="p-4 border border-gray-700 rounded-lg hover:bg-gray-800 transition flex items-center space-x-4">
                 <div className="flex-grow">
                   <a href={article.link} target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline text-lg font-semibold">
@@ -102,8 +98,8 @@ const Veille = () => {
                   </a>
                   <p className="text-gray-400 text-sm mt-2">{article.pubDate}</p>
                 </div>
-                <button onClick={() => toggleFavorite(article)} className="text-violet-500 hover:text-violet-700 text-2xl">
-                  {favorites.some((fav) => fav.link === article.link) ? <FaHeart /> : <FaRegSquare />}
+                <button onClick={() => toggleFavori(article)} className="text-violet-500 hover:text-violet-700 text-2xl">
+                  {favoris.some((fav) => fav.link === article.link) ? <FaHeart /> : <FaRegSquare />}
                 </button>
               </li>
             ))}

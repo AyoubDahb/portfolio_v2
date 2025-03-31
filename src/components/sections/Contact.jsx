@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-import { FaLinkedin, FaGithub } from "react-icons/fa"; // ✅ Ajout des icônes
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +21,12 @@ export const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        alert("Message Sent!");
+        alert("Message envoyé !");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch(() =>
+        alert("Oups ! Une erreur s'est produite. Veuillez réessayer.")
+      );
   };
 
   return (
@@ -35,8 +37,9 @@ export const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-150 text-center">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-violet-500 to-violet-200 bg-clip-text text-transparent">
-            Get In Touch
+            Me Contacter
           </h2>
+
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
               <input
@@ -46,7 +49,7 @@ export const Contact = () => {
                 required
                 value={formData.name}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-violet-500 focus:bg-violet-500/5"
-                placeholder="Name..."
+                placeholder="Nom..."
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -61,7 +64,7 @@ export const Contact = () => {
                 required
                 value={formData.email}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-violet-500 focus:bg-violet-500/5"
-                placeholder="example@gmail.com"
+                placeholder="exemple@gmail.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -76,7 +79,7 @@ export const Contact = () => {
                 rows={5}
                 value={formData.message}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-violet-500 focus:bg-violet-500/5"
-                placeholder="Your Message..."
+                placeholder="Votre message..."
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
@@ -87,14 +90,14 @@ export const Contact = () => {
               type="submit"
               className="w-full bg-violet-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
             >
-              Send Message
+              Envoyer le message
             </button>
           </form>
 
-          {/* ✅ Icônes GitHub et LinkedIn sous le formulaire */}
+          {/* Icônes GitHub et LinkedIn */}
           <div className="flex justify-center space-x-6 mt-6">
             <a
-              href="https://www.linkedin.com/in/ayoub-dahbi" // Remplace par ton LinkedIn
+              href="https://www.linkedin.com/in/ayoub-dahbi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-violet-400 hover:text-violet-600 transition text-3xl"
@@ -103,7 +106,7 @@ export const Contact = () => {
             </a>
 
             <a
-              href="https://github.com/AyoubDahb" // Remplace par ton GitHub
+              href="https://github.com/AyoubDahb"
               target="_blank"
               rel="noopener noreferrer"
               className="text-violet-400 hover:text-violet-600 transition text-3xl"

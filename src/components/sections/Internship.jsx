@@ -13,13 +13,13 @@ const Internship = () => {
       }}
     >
       <Navbar /> {/* Ajout de la Navbar */}
-      <h2 className="text-4xl font-bold mb-8">Choose Your Internship</h2>
+      <h2 className="text-4xl font-bold mb-8">Retour sur mes stages :</h2>
       <div className="space-x-4">
         <Link to="/internship/1" className="bg-violet-500 px-6 py-3 rounded text-violet-50 hover:bg-violet-700 transition">
-          Internship 1
+          Stage 1
         </Link>
         <Link to="/internship/2" className="bg-violet-500 px-6 py-3 rounded text-violet-50 hover:bg-violet-700 transition">
-          Internship 2
+          Stage 2
         </Link>
       </div>
     </div>

@@ -11,28 +11,28 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       <button
         onClick={() => setMenuOpen(false)}
         className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer"
-        aria-label="Close Menu"
+        aria-label="Fermer le menu"
       >
         &times;
       </button>
 
       <Link to="/" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
-        Home
+        Accueil
       </Link>
       <Link to="/about" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
-        About
+        À propos
       </Link>
       <Link to="/projects" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
-        Projects
+        Projets
       </Link>
       <Link to="/contact" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
         Contact
       </Link>
       <Link to="/veille" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
-        Veille
+        Veille informationnelle
       </Link>
       <Link to="/internship" onClick={() => setMenuOpen(false)} className="text-2xl font-semibold text-white my-4">
-        Internship
+        Stages
       </Link>
     </div>
   );

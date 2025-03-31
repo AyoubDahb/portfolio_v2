@@ -22,7 +22,7 @@ const InternshipDetail = () => {
       }}
     >
       <Navbar /> {/* Ajout de la Navbar */}
-      <h2 className="text-4xl font-bold mb-6">Internship {id}</h2>
+      <h2 className="text-4xl font-bold mb-6">Stage {id}</h2>
       <iframe
         src={docUrl}
         width="80%"
