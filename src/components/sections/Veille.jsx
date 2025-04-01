@@ -108,7 +108,7 @@ const Veille = () => {
             <ul className="list-disc list-inside pl-4 space-y-1">
               <li>Ingénieur en Intelligence Artificielle.</li>
               <li>Expert en vision par ordinateur.</li>
-              <li>Juriste en protection des données (RGPD).</li>
+              
             </ul>
 
             <h3 className="text-2xl font-semibold text-violet-300">Conclusion personnelle</h3>
