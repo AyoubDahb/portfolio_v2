@@ -69,7 +69,7 @@ const projects = [
   },
   {
     title: "Application de gestion de stock",
-    description: "Développement d’une application de gestion de stock avec un tableau de bord CRUD.",
+    description: "Conception d'une application web permettant de gérer efficacement le stock d'une organisation. Le système intègre les fonctionnalités essentielles du CRUD (Créer, Lire, Mettre à jour, Supprimer) pour assurer la gestion complète des produits : ajout de nouveaux articles, modification des informations, visualisation en temps réel du stock et suppression des articles obsolètes. Cette application garantit une meilleure organisation, une mise à jour rapide des inventaires et une réduction des erreurs humaines dans la gestion du stock.",
     category: "Stage",
     year: "2025",
     technologies: ["HTML", "CSS", "PHP", "SQL"],

@@ -6,7 +6,7 @@ const InternshipDetail = () => {
 
   const documentUrls = {
     "1": "https://docs.google.com/document/d/e/2PACX-1vSAfw2IO8DQGXu6_vbHWPDXWlSu1jdJQ1vMc0JYX7x8KfeaQ4YaBFFRcJhhC8BX8stf0oOXdfpdm8a9/pub",
-    "2": "https://docs.google.com/document/d/1FuNZXCwYQE13qHw2oj5HyGqxoMRHtEUp/pub?embedded=true",
+    "2": "https://docs.google.com/document/d/e/2PACX-1vSRO9oojQdiKYbS6T7PXNMEdAcEDFB2k7JAE5UrIZjl-lQZhCpYG9OMZRYKwlGTBw/pub",
   };
 
   const docUrl = documentUrls[id] || documentUrls["1"];
