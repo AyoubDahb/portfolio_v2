@@ -28,13 +28,26 @@ const ProjectModal = ({ project, onClose }) => {
           <FaTimes size={24} />
         </button>
 
-        {/* Image principale */}
-        <div className="rounded-xl overflow-hidden">
+        {/* Image principale avec titre et techs */}
+        <div className="relative rounded-xl overflow-hidden group">
           <img
             src={mainImage}
             alt={project.title}
-            className="w-full h-[350px] md:h-[350px] object-cover rounded-xl transition duration-300"
+            className="w-full h-[500px] md:h-[600px] object-cover rounded-xl brightness-75 group-hover:brightness-100 transition duration-500"
           />
+          <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
+            <h2 className="text-2xl font-bold text-white mb-2">{project.title}</h2>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-violet-500/20 text-violet-200 text-xs px-3 py-1 rounded-full backdrop-blur-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Images supplémentaires */}
@@ -54,19 +67,7 @@ const ProjectModal = ({ project, onClose }) => {
 
         {/* Texte */}
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold text-white leading-tight">{project.title}</h2>
           <p className="text-gray-300 leading-relaxed text-sm md:text-base">{project.description}</p>
-
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="bg-violet-500/20 text-violet-200 text-xs px-3 py-1 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
 
           <div className="flex space-x-4 mt-4">
             {project.github && (

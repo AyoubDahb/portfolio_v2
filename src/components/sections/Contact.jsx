@@ -2,6 +2,8 @@ import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { HiOutlineDocumentText } from "react-icons/hi"; // ✅
+
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -113,6 +115,11 @@ export const Contact = () => {
             >
               <FaGithub />
             </a>
+
+             <a href="/docs/CV_DAHBI_Ayoub_Alternance.pdf" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-600 transition text-3xl">
+                            <HiOutlineDocumentText />
+                          </a>
+
           </div>
         </div>
       </RevealOnScroll>

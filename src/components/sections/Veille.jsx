@@ -60,8 +60,7 @@ const Veille = () => {
   };
 
   return (
-    <div
-      className="min-h-screen bg-[#0a0a0a] text-white pt-20 flex flex-col justify-between"
+    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 flex flex-col justify-between"
       style={{
         backgroundImage: "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0))",
         backgroundAttachment: "fixed",
@@ -73,11 +72,52 @@ const Veille = () => {
 
       {chargement ? (
         <div className="flex flex-col items-center justify-center flex-grow">
-          <FaSpinner className="text-violet-500 text-6xl animate-spin" />
+          <FaSpinner className="text-violet-500 text-6xl animate-spin-slow" />
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center p-8 flex-grow">
-          <h2 className="text-4xl font-bold mb-8">Veille Informatique - Reconnaissance Faciale</h2>
+        <div className="flex flex-col items-center justify-center p-8 flex-grow space-y-8">
+
+          <div className="max-w-4xl text-left text-gray-200 space-y-6 leading-relaxed">
+
+            <h2 className="text-3xl font-bold text-violet-400">Pourquoi la reconnaissance faciale ?</h2>
+            <p>La reconnaissance faciale n'est plus un simple sujet de science-fiction. Aujourd'hui, elle est bien présente dans notre quotidien, parfois sans même que l'on s'en rende compte.</p>
+            
+            <h3 className="text-2xl font-semibold text-violet-300">Un outil puissant mais controversé</h3>
+            <p>Elle permet d’identifier les visages via des caméras et des algorithmes d’IA. On la retrouve dans les aéroports, dans nos téléphones, et peut-être bientôt dans nos rues.</p>
+
+            <h3 className="text-2xl font-semibold text-violet-300">Les avantages ?</h3>
+            <ul className="list-disc list-inside pl-4 space-y-1">
+              <li>Fluidifier les contrôles d’identité.</li>
+              <li>Renforcer la sécurité.</li>
+              <li>Offrir des expériences utilisateurs simplifiées.</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-violet-300">Mais attention...</h3>
+            <ul className="list-disc list-inside pl-4 space-y-1">
+              <li>Problèmes de vie privée.</li>
+              <li>Dérapages possibles dans les espaces publics.</li>
+              <li>Risque de biais et d'erreurs dans les algorithmes.</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-violet-300">En France et ailleurs</h3>
+            <p>En France, son usage est très encadré par la CNIL. Par exemple, les projets visant à surveiller les passants via caméra sont pour l’instant interdits sans consentement. À l’inverse, certains pays l'interdisent totalement comme San Francisco.</p>
+            <p>En 2022, Clearview AI a été sanctionnée de 20 millions d’euros pour collecte illégale de données en France.</p>
+
+            <h3 className="text-2xl font-semibold text-violet-300">Les métiers liés</h3>
+            <p>Les métiers touchant de près à cette technologie sont très demandés :</p>
+            <ul className="list-disc list-inside pl-4 space-y-1">
+              <li>Ingénieur en Intelligence Artificielle.</li>
+              <li>Expert en vision par ordinateur.</li>
+              <li>Juriste en protection des données (RGPD).</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-violet-300">Conclusion personnelle</h3>
+            <p>
+              J’ai choisi ce sujet car je suis passionné d’IA, mais aussi parce que je me rends compte que son développement va impacter notre société de façon durable, pour le meilleur... comme pour le pire.
+            </p>
+          </div>
+
+          {/* Boutons & Articles */}
           <div className="mb-6 flex space-x-4">
             <button
               className="bg-violet-500 px-4 py-2 rounded text-white hover:bg-violet-700 transition"
@@ -86,6 +126,7 @@ const Veille = () => {
               {afficherFavoris ? "Voir tous les articles" : "Voir les favoris"}
             </button>
           </div>
+
           <ul className="space-y-4 max-w-3xl">
             {afficherFavoris && favoris.length === 0 && (
               <p className="text-gray-400 text-center">Aucun favori pour le moment.</p>
@@ -104,6 +145,7 @@ const Veille = () => {
               </li>
             ))}
           </ul>
+
         </div>
       )}
 

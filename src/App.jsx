@@ -11,6 +11,8 @@ import { Contact } from "./components/sections/Contact";
 import Veille from "./components/sections/Veille"; // ✅ Import correct
 import { Internship } from "./components/sections/Internship"; // ✅ Import correct
 import { InternshipDetail } from "./components/sections/InternshipDetail"; // ✅ Import correct
+import E5 from "./components/sections/E5";
+
 
 function MainPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,6 +45,8 @@ function App() {
           <Route path="/veille" element={<Veille />} />
           <Route path="/internship" element={<Internship />} />
           <Route path="/internship/:id" element={<InternshipDetail />} />
+          <Route path="/e5" element={<E5 />} />
+
         </Routes>
       </div>
     </Router>

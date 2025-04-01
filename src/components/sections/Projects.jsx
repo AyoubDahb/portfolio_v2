@@ -5,48 +5,80 @@ import ProjectModal from "./ProjectModal";
 
 // === Liste des projets ===
 const projects = [
+  
+  
   {
-    title: "Système d'automatisation des demandes de sorties",
-    description: "Développement d’un système de demandes avec notifications par e-mail automatisées. Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées.Développement d’un système de demandes avec notifications par e-mail automatisées. ",
+    title: "Site web restaurant dynamique",
+    description: "Dans le cadre de mon apprentissage du modèle MVC (Model - View - Controller), j'ai développé une application web de gestion de restaurants. Ce projet avait pour objectif de mettre en pratique les principes de séparation des responsabilités offerts par ce patron de conception. L'application permet aux utilisateurs de s'inscrire, de parcourir une liste de restaurants, d'attribuer des j'aime à leurs établissements favoris, et de consulter ou poster des commentaires relatifs aux restaurants.",
+    category: "AP",
+    year: "2024",
+    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    image: "images/resto/resto.jpg",
+    extraImages: [  "images/resto/recherche.jpg" ],
+    github: "https://github.com/ayoubdahb",
+  
+  },
+
+   {
+    title: "Orange",
+    description: "Correction de bugs d'un site orange existant. Implémentation d’un système de gestion des rôles (administrateur, utilisateur) et renforcement de la sécurité avec la vérification de la complexité des mots de passe. Projet réalisé en PHP orienté objet modèle MVC.",
+    category: "AP",
+    year: "2024",
+    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    image: "images/orange/home.jpg",
+    extraImages: [  "images/orange/connexion.jpg","images/orange/ins.jpg" ],
+    github: "https://github.com/ayoubdahb",
+    
+  },
+  
+   {
+    title: "Jeux olympique 2024",
+    description: "Correction de bugs et ajout de fonctionnalités : gestion des rôles, vérification de la sécurité des mots de passe, possibilité de supprimer un professionnel avec l’ensemble de ses annonces, et affichage d’une liste complète des professionnels. Projet en PHP orienté objet modèle MVC.",
+    category: "AP",
+    year: "2025",
+    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    image: "images/jO/home.jpg",
+    extraImages: [  "images/jO/connexion.jpg","images/jO/inscription.jpg", "images/jO/evenement.jpg"],
+    github: "https://github.com/ayoubdahb",
+    
+  },
+
+{
+    title: "Site pour un salon de coiffure",
+    description: "Création d’un site vitrine pour améliorer la visibilité en ligne du salon à l’aide d’un CMS, HTML et CSS. Mise en place d’une interface simple et responsive.",
     category: "Stage",
     year: "2024",
-    technologies: ["HTML", "CSS", "PHP", "SQL"],
-    image: "/images/project1.jpg",
-    extraImages: ["/images/project1.jpg" , "/images/project2.jpg"],
-    github: "https://github.com/example",
-    live: "https://example.com",
+    technologies: ["HTML", "CSS", "PHP","CMS"],
+    image: "images/coiffeur/coiffeur.jpg",
+    extraImages: [ "images/coiffeur/story.jpg","images/coiffeur/service.jpg", "images/coiffeur/contact.jpg", "images/coiffeur/adresse.jpg",],
+    github: "https://github.com/ayoubdahb",
+   
+  },
+
+
+  {
+    title: "Système d'automatisation des demandes de sorties",
+    description: "Réalisation d’une application web facilitant la gestion des demandes de sorties scolaires. Les formulaires complétés par les enseignants sont automatiquement transformés en documents PDF grâce à la bibliothèque mPDF puis envoyés par mail via PHPMailer aux responsables concernés (chef d’établissement, vie scolaire, etc.). Ce projet a permis d’automatiser et de fluidifier l’ensemble du processus administratif, réduisant considérablement les erreurs et les délais de traitement.",
+    category: "Stage",
+    year: "2025",
+    technologies: ["HTML", "CSS", "PHP"],
+    image: "images/formulaire/formulaire.jpg",
+    extraImages: [ "images/formulaire/mpdf.jpg", "images/formulaire/phpmailer.jpg"],
+    github: "https://github.com/ayoubdahb",
+   
   },
   {
     title: "Application de gestion de stock",
     description: "Développement d’une application de gestion de stock avec un tableau de bord CRUD.",
     category: "Stage",
-    year: "2024",
+    year: "2025",
     technologies: ["HTML", "CSS", "PHP", "SQL"],
-    image: "/images/project2.jpg",
-    github: "https://github.com/example",
-    live: "https://example.com",
+    image: "images/inventaire/dashboard.jpg",
+    extraImages: [ "images/inventaire/connexion.jpg", "images/inventaire/entré.jpg" , "images/inventaire/gestion.jpg" , "images/inventaire/journal.jpg", "images/inventaire/saisie.jpg", "images/inventaire/sortie.jpg", "images/inventaire/sql.jpg", "images/inventaire/structure.jpg"  ],
+
+    github: "https://github.com/ayoubdahb",
   },
-  {
-    title: "Site pour un salon de coiffure",
-    description: "Création d’un site web pour améliorer la visibilité en ligne d’un salon de coiffure.",
-    category: "Stage",
-    year: "2024",
-    technologies: ["CMS", "HTML", "CSS", "SQL"],
-    image: "/images/project3.jpg",
-    github: "https://github.com/example",
-    live: "https://example.com",
-  },
-  {
-    title: "JO 2024",
-    description: "Application web de gestion des Jeux Olympiques.",
-    category: "Scolaire",
-    year: "2024",
-    technologies: ["HTML", "CSS", "PHP", "SQL"],
-    image: "/images/project4.jpg",
-    extraImages: ["/images/project4b.jpg"],
-    github: "https://github.com/example",
-    live: "https://example.com",
-  },
+ 
 ];
 
 // === Composant principal ===

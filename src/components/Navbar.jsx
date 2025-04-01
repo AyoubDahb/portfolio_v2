@@ -45,9 +45,12 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             <button onClick={() => handleNavigation("projects")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Projets
             </button>
-            <button onClick={() => handleNavigation("contact")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
-              Contact
-            </button>
+
+            <RouterLink to="/E5" className="text-gray-300 hover:text-white transition-colors">
+  E5
+</RouterLink>
+
+          
 
             <RouterLink to="/internship" className="text-violet-50 hover:text-white transition-colors">
               Stages
@@ -56,6 +59,11 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             <RouterLink to="/veille" className="text-violet-50 hover:text-white transition-colors">
               Veille informationelle
             </RouterLink>
+
+              <button onClick={() => handleNavigation("contact")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
+              Contact
+            </button>
+
           </div>
         </div>
       </div>

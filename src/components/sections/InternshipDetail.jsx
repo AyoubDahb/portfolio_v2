@@ -1,12 +1,12 @@
 import { Link, useParams } from "react-router-dom";
-import { Navbar } from "../Navbar"; // ✅ Bon import
+import { Navbar } from "../Navbar";
 
 const InternshipDetail = () => {
   const { id } = useParams();
 
   const documentUrls = {
-    "1": "https://drive.google.com/file/d/TON_ID_INTERNSHIP_1/preview",
-    "2": "https://docs.google.com/document/d/1FuNZXCwYQE13qHw2oj5HyGqxoMRHtEUp/preview",
+    "1": "https://docs.google.com/document/d/e/2PACX-1vSAfw2IO8DQGXu6_vbHWPDXWlSu1jdJQ1vMc0JYX7x8KfeaQ4YaBFFRcJhhC8BX8stf0oOXdfpdm8a9/pub",
+    "2": "https://docs.google.com/document/d/1FuNZXCwYQE13qHw2oj5HyGqxoMRHtEUp/pub?embedded=true",
   };
 
   const docUrl = documentUrls[id] || documentUrls["1"];
@@ -21,7 +21,7 @@ const InternshipDetail = () => {
         overflowX: "hidden",
       }}
     >
-      <Navbar /> {/* Ajout de la Navbar */}
+      <Navbar />
       <h2 className="text-4xl font-bold mb-6">Stage {id}</h2>
       <iframe
         src={docUrl}
@@ -29,10 +29,10 @@ const InternshipDetail = () => {
         height="600px"
         className="border rounded-lg"
         allow="autoplay"
+        title="Internship Document"
       ></iframe>
-     
     </div>
   );
 };
 
-export { InternshipDetail }; // ✅ Export propre
+export { InternshipDetail };
