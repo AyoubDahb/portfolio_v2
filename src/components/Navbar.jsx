@@ -46,9 +46,9 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               Projets
             </button>
 
-            <RouterLink to="/E5" className="text-gray-300 hover:text-white transition-colors">
+            {/* <RouterLink to="/E5" className="text-gray-300 hover:text-white transition-colors">
   E5
-</RouterLink>
+</RouterLink> */}
 
           
 

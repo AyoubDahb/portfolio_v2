@@ -73,9 +73,7 @@ export const Home = () => {
               </a>
 
               {/* Icône CV */}
-              <a href="/docs/CV_DAHBI_Ayoub_Alternance.pdf" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-600 transition text-3xl">
-                <HiOutlineDocumentText />
-              </a>
+            
 
             </div>
           </div>
