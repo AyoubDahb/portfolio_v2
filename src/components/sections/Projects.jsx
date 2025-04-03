@@ -5,54 +5,54 @@ import ProjectModal from "./ProjectModal";
 
 // === Liste des projets ===
 const projects = [
-  
-  
+
+
   {
     title: "Site web restaurant dynamique",
     description: "Dans le cadre de mon apprentissage du modèle MVC (Model - View - Controller), j'ai développé une application web de gestion de restaurants. Ce projet avait pour objectif de mettre en pratique les principes de séparation des responsabilités offerts par ce patron de conception. L'application permet aux utilisateurs de s'inscrire, de parcourir une liste de restaurants, d'attribuer des j'aime à leurs établissements favoris, et de consulter ou poster des commentaires relatifs aux restaurants.",
     category: "AP",
     year: "2024",
-    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "images/resto/resto.jpg",
-    extraImages: [  "images/resto/recherche.jpg" ],
+    extraImages: ["images/resto/recherche.jpg"],
     github: "https://github.com/ayoubdahb",
-  
+
   },
 
-   {
+  {
     title: "Orange",
     description: "Correction de bugs d'un site orange existant. Implémentation d’un système de gestion des rôles (administrateur, utilisateur) et renforcement de la sécurité avec la vérification de la complexité des mots de passe. Projet réalisé en PHP orienté objet modèle MVC.",
     category: "AP",
     year: "2024",
-    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "images/orange/home.jpg",
-    extraImages: [  "images/orange/connexion.jpg","images/orange/ins.jpg" ],
+    extraImages: ["images/orange/connexion.jpg", "images/orange/ins.jpg"],
     github: "https://github.com/ayoubdahb",
-    
+
   },
-  
-   {
+
+  {
     title: "Jeux olympique 2024",
     description: "Correction de bugs et ajout de fonctionnalités : gestion des rôles, vérification de la sécurité des mots de passe, possibilité de supprimer un professionnel avec l’ensemble de ses annonces, et affichage d’une liste complète des professionnels. Projet en PHP orienté objet modèle MVC.",
     category: "AP",
     year: "2025",
-    technologies: [ "HTML", "CSS", "PHP" ,"SQL"],
+    technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "images/jO/home.jpg",
-    extraImages: [  "images/jO/connexion.jpg","images/jO/inscription.jpg", "images/jO/evenement.jpg"],
+    extraImages: ["images/jO/connexion.jpg", "images/jO/inscription.jpg", "images/jO/evenement.jpg"],
     github: "https://github.com/ayoubdahb",
-    
+
   },
 
-{
+  {
     title: "Site pour un salon de coiffure",
     description: "Création d’un site vitrine pour améliorer la visibilité en ligne du salon à l’aide d’un CMS, HTML et CSS. Mise en place d’une interface simple et responsive.",
     category: "Stage",
     year: "2024",
-    technologies: ["HTML", "CSS", "PHP","CMS"],
+    technologies: ["HTML", "CSS", "PHP", "CMS"],
     image: "images/coiffeur/coiffeur.jpg",
-    extraImages: [ "images/coiffeur/story.jpg","images/coiffeur/service.jpg", "images/coiffeur/contact.jpg", "images/coiffeur/adresse.jpg",],
+    extraImages: ["images/coiffeur/story.jpg", "images/coiffeur/service.jpg", "images/coiffeur/contact.jpg", "images/coiffeur/adresse.jpg",],
     github: "https://github.com/ayoubdahb",
-   
+
   },
 
 
@@ -63,9 +63,9 @@ const projects = [
     year: "2025",
     technologies: ["HTML", "CSS", "PHP"],
     image: "images/formulaire/formulaire.jpg",
-    extraImages: [ "images/formulaire/mpdf.jpg", "images/formulaire/phpmailer.jpg"],
+    extraImages: [],
     github: "https://github.com/ayoubdahb",
-   
+
   },
   {
     title: "Application de gestion de stock",
@@ -74,11 +74,11 @@ const projects = [
     year: "2025",
     technologies: ["HTML", "CSS", "PHP", "SQL"],
     image: "images/inventaire/dashboard.jpg",
-    extraImages: [ "images/inventaire/connexion.jpg", "images/inventaire/entré.jpg" , "images/inventaire/gestion.jpg" , "images/inventaire/journal.jpg", "images/inventaire/saisie.jpg", "images/inventaire/sortie.jpg", "images/inventaire/sql.jpg", "images/inventaire/structure.jpg"  ],
+    extraImages: ["images/inventaire/connexion.jpg", "images/inventaire/entré.jpg", "images/inventaire/gestion.jpg", "images/inventaire/journal.jpg", "images/inventaire/saisie.jpg", "images/inventaire/sortie.jpg", "images/inventaire/sql.jpg", "images/inventaire/structure.jpg"],
 
     github: "https://github.com/ayoubdahb",
   },
- 
+
 ];
 
 // === Composant principal ===

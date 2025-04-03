@@ -52,13 +52,13 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
           
 
-            <RouterLink to="/internship" className="text-violet-50 hover:text-white transition-colors">
+            {/* <RouterLink to="/internship" className="text-violet-50 hover:text-white transition-colors">
               Stages
             </RouterLink>
 
             <RouterLink to="/veille" className="text-violet-50 hover:text-white transition-colors">
               Veille informationelle
-            </RouterLink>
+            </RouterLink> */}
 
               <button onClick={() => handleNavigation("contact")} className="text-violet-50 hover:text-white transition-colors cursor-pointer">
               Contact

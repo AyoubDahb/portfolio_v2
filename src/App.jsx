@@ -36,15 +36,14 @@ function App() {
     <Router>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } text-gray-100`}
+        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
+          } text-gray-100`}
       >
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/veille" element={<Veille />} />
+          {/* <Route path="/veille" element={<Veille />} />
           <Route path="/internship" element={<Internship />} />
-          <Route path="/internship/:id" element={<InternshipDetail />} />
+          <Route path="/internship/:id" element={<InternshipDetail />} /> */}
           {/* <Route path="/e5" element={<E5 />} /> */}
 
         </Routes>
